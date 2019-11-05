@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import 'app_theme.dart';
+import 'shared/widgets/background_image.dart';
+import 'shared/widgets/box_gradient.dart';
+import 'shared/widgets/default_appbar.dart';
+import 'shared/widgets/default_drawer.dart';
+import 'shared/widgets/introduction_box.dart';
 
 class AppPage extends StatefulWidget {
   @override
@@ -6,92 +14,26 @@ class AppPage extends StatefulWidget {
 }
 
 class _AppPageState extends State<AppPage> {
-
-  final _textColor = Colors.white;
-
-  final _textStyle = TextStyle(
-    color: Colors.white,
-  );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'FuturaPT',
-        primarySwatch: Colors.grey,
-        canvasColor: Colors.black.withOpacity(0.6),
-        hoverColor: Colors.grey.withOpacity(0.4),
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-        textTheme: TextTheme(
-          headline: _textStyle,
-          subtitle: _textStyle,
-          title: _textStyle,
-          body1: _textStyle,
-          body2: _textStyle,
-          subhead: _textStyle,
-        ),
-      ),
+      theme: AppTheme.themeData,
       title: 'Portfolio',
-      home: Container(
-        decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.8),
-          backgroundBlendMode: BlendMode.overlay,
-          image: DecorationImage(
-            image: AssetImage('assets/images/background.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          drawer: Drawer(
-            child: Center(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: <Widget>[
-                    ListTile(
-                      title: Text(
-                        'Who I\'m',
-                        textAlign: TextAlign.center,
-                      ),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      title: Text(
-                        'Work',
-                        textAlign: TextAlign.center,
-                      ),
-                      onTap: () {},
-                    ),
-                  ],
-                ),
+      home: Stack(
+        children: <Widget>[
+          BackgroundImage(),
+          Container(
+            decoration: BoxGradient.boxDecoration(),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+              drawer: DefaultDrawer(),
+              appBar: DefaultAppBar.appBar(),
+              body: SafeArea(
+                child: IntroductionBox(),
               ),
             ),
-          ),
-          appBar: AppBar(
-            iconTheme: IconThemeData(
-              color: _textColor,
-            ),
-            backgroundColor: Colors.transparent,
-            elevation: 0.0,
-            title: Text(
-              'Guilherme Vendramini',
-              style: TextStyle(color: _textColor),
-            ),
-          ),
-          body: SafeArea(
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              alignment: Alignment.center,
-              child: SingleChildScrollView(
-                child: Text('Building Apps and Websites with excellence', style: TextStyle(
-                  fontSize: 38.0,
-                ),),
-              ),
-            ),
-          ),
-        ),
+          )
+        ],
       ),
     );
   }
