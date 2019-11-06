@@ -1,19 +1,33 @@
 import 'package:flutter/foundation.dart';
 
 class AppBloc extends ChangeNotifier {
-  /*
-  * Variables
-  * */
+  bool _startIntroAnimation = false;
+  bool _startProfileAnimation = false;
 }
 
 class App extends AppBloc {
-  /*
-  * Getters and Setters
-  * */
+  bool get isIntroAnimationStarted {
+    return _startIntroAnimation;
+  }
+
+  bool get isProfileAnimationStarted {
+    return _startProfileAnimation;
+  }
 }
 
 class AppProvider extends App {
-  /*
-  * Functions
-  * */
+  void startIntroAnimation() {
+    Future.delayed(const Duration(seconds: 2), () {
+      _startIntroAnimation = true;
+      startProfileAnimation();
+      notifyListeners();
+    });
+  }
+
+  void startProfileAnimation() {
+    Future.delayed(const Duration(seconds: 2), () {
+      _startProfileAnimation = true;
+      notifyListeners();
+    });
+  }
 }
