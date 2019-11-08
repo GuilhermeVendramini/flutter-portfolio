@@ -7,7 +7,6 @@ class BackgroundImage extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/background.jpg'),
-          colorFilter: ColorFilter.mode(Colors.black, BlendMode.overlay),
           fit: BoxFit.cover,
         ),
       ),

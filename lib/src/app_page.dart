@@ -10,6 +10,7 @@ import 'shared/widgets/default_drawer.dart';
 import 'shared/widgets/gradient_box.dart';
 import 'shared/widgets/introduction_box.dart';
 import 'shared/widgets/profile_box.dart';
+import 'shared/widgets/work_box.dart';
 
 class AppPage extends StatelessWidget {
   @override
@@ -52,14 +53,14 @@ class PageContent extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 padding: const EdgeInsets.symmetric(
                     horizontal: 20.0, vertical: 40.0),
-                child: Column(
-                  children: <Widget>[
-                    IntroductionBox(),
-                    SizedBox(
-                      height: 60.0,
-                    ),
-                    _showProfileBox ? ProfileBox() : Container(),
-                  ],
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      IntroductionBox(),
+                      _showProfileBox ? ProfileBox() : Container(),
+                      _showProfileBox ? WorkBox() : Container(),
+                    ],
+                  ),
                 ),
               ),
             ),

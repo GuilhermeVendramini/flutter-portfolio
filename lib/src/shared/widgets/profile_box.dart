@@ -18,6 +18,9 @@ class ProfileBox extends StatelessWidget {
         width: _targetWidth,
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 60.0,
+            ),
             _title(),
             SizedBox(
               height: 20.0,
