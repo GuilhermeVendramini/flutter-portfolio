@@ -11,10 +11,13 @@ class IntroductionBox extends StatelessWidget {
     return AnimatedOpacity(
       duration: Duration(seconds: 2),
       opacity: _isAnimationStarted ? 1.0 : 0.0,
-      child: Text(
-        'Building Apps and Websites with excellence',
-        style: TextStyle(
-          fontSize: 38.0,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Text(
+          'Building Apps and Websites with excellence',
+          style: TextStyle(
+            fontSize: 40.0,
+          ),
         ),
       ),
     );

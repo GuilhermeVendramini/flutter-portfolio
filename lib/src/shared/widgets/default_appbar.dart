@@ -13,7 +13,7 @@ class DefaultAppBar {
       backgroundColor: Colors.transparent,
       elevation: 0.0,
       title: Text(
-        'Guilherme Vendramini',
+        'Portfolio',
         style: TextStyle(color: _textColor),
       ),
     );

@@ -50,17 +50,13 @@ class PageContent extends StatelessWidget {
             curve: Curves.fastOutSlowIn,
             child: SingleChildScrollView(
               child: Container(
-                width: MediaQuery.of(context).size.width,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 40.0),
-                child: Center(
-                  child: Column(
-                    children: <Widget>[
-                      IntroductionBox(),
-                      _showProfileBox ? ProfileBox() : Container(),
-                      _showProfileBox ? WorkBox() : Container(),
-                    ],
-                  ),
+                padding: const EdgeInsets.only(top: 100.0, bottom: 40.0),
+                child: Column(
+                  children: <Widget>[
+                    IntroductionBox(),
+                    _showProfileBox ? ProfileBox() : Container(),
+                    _showProfileBox ? WorkBox() : Container(),
+                  ],
                 ),
               ),
             ),

@@ -12,6 +12,7 @@ class AppTheme {
     primarySwatch: Colors.grey,
     canvasColor: Colors.black.withOpacity(0.9),
     hoverColor: Colors.grey.withOpacity(0.4),
+    dividerColor: Colors.white.withOpacity(0.4),
     iconTheme: IconThemeData(
       color: Colors.white,
     ),

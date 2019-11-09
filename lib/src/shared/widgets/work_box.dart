@@ -12,32 +12,31 @@ class WorkBox extends StatelessWidget {
     final double _targetWidth =
         _deviceWidth > 900.0 ? 900.0 : _deviceWidth * 0.95;
 
+    _title() {
+      return Text(
+        'Work',
+        style: TextStyle(
+          fontSize: 40.0,
+        ),
+      );
+    }
+
     return AnimatedOpacity(
       duration: Duration(seconds: 1),
       opacity: _isProfileAnimationStarted ? 1.0 : 0.0,
       child: Container(
         width: _targetWidth,
+        margin: EdgeInsets.only(top: 150.0),
         child: Column(
           children: <Widget>[
-            SizedBox(
-              height: 60.0,
-            ),
             _title(),
+            Divider(),
             SizedBox(
-              height: 20.0,
+              height: 40.0,
             ),
             ListWork(),
           ],
         ),
-      ),
-    );
-  }
-
-  _title() {
-    return Text(
-      'Work',
-      style: TextStyle(
-        fontSize: 40.0,
       ),
     );
   }
@@ -48,7 +47,8 @@ class ListWork extends StatelessWidget {
   Widget build(BuildContext context) {
     final double _deviceWidth = MediaQuery.of(context).size.width;
     final double _targetWidth =
-    _deviceWidth > 650.0 ? 650.0 : _deviceWidth * 0.80;
+        _deviceWidth > 650.0 ? 650.0 : _deviceWidth * 0.80;
+
     return Container(
       height: 400.0,
       child: ListView.builder(
