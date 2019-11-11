@@ -10,9 +10,11 @@ class AppTheme {
   static final ThemeData themeData = ThemeData(
     fontFamily: 'FuturaPT',
     primarySwatch: Colors.grey,
-    canvasColor: Colors.black.withOpacity(0.9),
+    canvasColor: Colors.white.withOpacity(0.9),
     hoverColor: Colors.grey.withOpacity(0.4),
     dividerColor: Colors.white.withOpacity(0.4),
+    textSelectionColor: Colors.black,
+    textSelectionHandleColor: Colors.white,
     iconTheme: IconThemeData(
       color: Colors.white,
     ),

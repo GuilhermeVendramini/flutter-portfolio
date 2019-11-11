@@ -21,6 +21,8 @@ dependencies:
     sdk: flutter
 
   provider: ^3.1.0+1
+  url_launcher: ^5.2.5
+  universal_html: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +42,10 @@ flutter:
 
   assets:
     - assets/images/background.jpg
+    - assets/images/github.png
+    - assets/images/instagram.png
+    - assets/images/linkedin.png
+    - assets/images/whatsapp.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

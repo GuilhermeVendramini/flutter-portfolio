@@ -40,7 +40,7 @@ class ProfileBox extends StatelessWidget {
       child: Container(
         width: _deviceWidth,
         color: Colors.black.withOpacity(0.4),
-        margin: EdgeInsets.only(top: 150.0),
+        margin: EdgeInsets.only(top: 130.0),
         padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 80.0),
         child: Column(
           children: <Widget>[

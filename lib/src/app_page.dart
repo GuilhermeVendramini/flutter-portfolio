@@ -10,6 +10,7 @@ import 'shared/widgets/default_drawer.dart';
 import 'shared/widgets/gradient_box.dart';
 import 'shared/widgets/introduction_box.dart';
 import 'shared/widgets/profile_box.dart';
+import 'shared/widgets/social_box.dart';
 import 'shared/widgets/work_box.dart';
 
 class AppPage extends StatelessWidget {
@@ -50,12 +51,13 @@ class PageContent extends StatelessWidget {
             curve: Curves.fastOutSlowIn,
             child: SingleChildScrollView(
               child: Container(
-                padding: const EdgeInsets.only(top: 100.0, bottom: 40.0),
+                padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
                 child: Column(
                   children: <Widget>[
                     IntroductionBox(),
                     _showProfileBox ? ProfileBox() : Container(),
                     _showProfileBox ? WorkBox() : Container(),
+                    _showProfileBox ? SocialBox() : Container(),
                   ],
                 ),
               ),

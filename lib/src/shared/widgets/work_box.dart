@@ -26,7 +26,7 @@ class WorkBox extends StatelessWidget {
       opacity: _isProfileAnimationStarted ? 1.0 : 0.0,
       child: Container(
         width: _targetWidth,
-        margin: EdgeInsets.only(top: 150.0),
+        margin: EdgeInsets.only(top: 130.0),
         child: Column(
           children: <Widget>[
             _title(),
@@ -58,7 +58,7 @@ class ListWork extends StatelessWidget {
           return Container(
             width: _targetWidth,
             alignment: Alignment.center,
-            margin: EdgeInsets.all(8.0),
+            margin: EdgeInsets.symmetric(horizontal: 8.0),
             padding: EdgeInsets.all(20.0),
             color: Colors.grey.withOpacity(0.6),
             child: Text(
