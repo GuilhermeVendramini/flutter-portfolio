@@ -4,6 +4,10 @@ import 'package:provider/provider.dart';
 import '../../app_bloc.dart';
 
 class WorkBox extends StatelessWidget {
+  final GlobalKey _workKey;
+
+  WorkBox(this._workKey);
+
   @override
   Widget build(BuildContext context) {
     final _bloc = Provider.of<AppProvider>(context);
@@ -22,6 +26,7 @@ class WorkBox extends StatelessWidget {
     }
 
     return AnimatedOpacity(
+      key: _workKey,
       duration: Duration(seconds: 1),
       opacity: _isProfileAnimationStarted ? 1.0 : 0.0,
       child: Container(

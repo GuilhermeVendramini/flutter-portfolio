@@ -9,6 +9,10 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../app_bloc.dart';
 
 class SocialBox extends StatelessWidget {
+  final GlobalKey _socialKey;
+
+  SocialBox(this._socialKey);
+
   @override
   Widget build(BuildContext context) {
     final _bloc = Provider.of<AppProvider>(context);
@@ -27,7 +31,7 @@ class SocialBox extends StatelessWidget {
     }
 
     _body() {
-      final double _socialIconHeight = 40.0;
+      final double _socialIconHeight = 30.0;
 
       return Wrap(
         alignment: WrapAlignment.center,
@@ -81,7 +85,7 @@ class SocialBox extends StatelessWidget {
       return Text(
         'guilhermevendramini@hotmail.com',
         style: TextStyle(
-          fontSize: 18.0,
+          fontSize: 16.0,
           color: Colors.white,
         ),
       );
@@ -106,6 +110,7 @@ class SocialBox extends StatelessWidget {
     }
 
     return AnimatedOpacity(
+      key: _socialKey,
       duration: Duration(seconds: 1),
       opacity: _isProfileAnimationStarted ? 1.0 : 0.0,
       child: Container(
@@ -136,7 +141,7 @@ class SocialBox extends StatelessWidget {
 
   _launchURL(String url) async {
     if (kIsWeb) {
-      return html.window.open(url, '');
+      html.window.open(url, '');
     } else {
       if (await canLaunch(url)) {
         await launch(url);

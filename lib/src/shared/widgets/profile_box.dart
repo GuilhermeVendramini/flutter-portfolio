@@ -4,12 +4,17 @@ import 'package:provider/provider.dart';
 import '../../app_bloc.dart';
 
 class ProfileBox extends StatelessWidget {
+  final GlobalKey _profileKey;
+
+  ProfileBox(this._profileKey);
+
   @override
   Widget build(BuildContext context) {
     final _bloc = Provider.of<AppProvider>(context);
     final _isProfileAnimationStarted = _bloc.isProfileAnimationStarted;
     final double _deviceWidth = MediaQuery.of(context).size.width;
-    final double _targetWidth = _deviceWidth > 900.0 ? 900.0 : _deviceWidth * 0.95;
+    final double _targetWidth =
+        _deviceWidth > 900.0 ? 900.0 : _deviceWidth * 0.95;
 
     _title() {
       return Text(
@@ -35,6 +40,7 @@ class ProfileBox extends StatelessWidget {
     }
 
     return AnimatedOpacity(
+      key: _profileKey,
       duration: Duration(seconds: 1),
       opacity: _isProfileAnimationStarted ? 1.0 : 0.0,
       child: Container(
