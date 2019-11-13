@@ -39,6 +39,13 @@ class ProfileBox extends StatelessWidget {
       );
     }
 
+    _avatar() {
+      return CircleAvatar(
+        backgroundImage: AssetImage('assets/images/gui.jpg'),
+        radius: 80.0,
+      );
+    }
+
     return AnimatedOpacity(
       key: _profileKey,
       duration: Duration(seconds: 1),
@@ -52,6 +59,10 @@ class ProfileBox extends StatelessWidget {
           children: <Widget>[
             _title(),
             Divider(),
+            SizedBox(
+              height: 40.0,
+            ),
+            _avatar(),
             SizedBox(
               height: 40.0,
             ),

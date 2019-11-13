@@ -18,7 +18,7 @@ class AppPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppTheme.themeData,
-      title: 'Portfolio',
+      title: 'Portfolio - Guilherme Vendramini',
       home: Stack(
         children: <Widget>[
           BackgroundImage(),

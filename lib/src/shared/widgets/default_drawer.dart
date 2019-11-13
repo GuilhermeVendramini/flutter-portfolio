@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_bloc.dart';
@@ -25,46 +26,45 @@ class _DefaultDrawerState extends State<DefaultDrawer> {
     );
 
     return Drawer(
-      child: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              ListTile(
-                title: Text(
-                  'Who I\'m',
-                  style: _textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                onTap: () {
-                  if (_bloc.isProfileAnimationStarted)
-                    _jumpTo(context, widget._key[0]);
-                },
-              ),
-              ListTile(
-                title: Text(
-                  'Work',
-                  style: _textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                onTap: () {
-                  if (_bloc.isProfileAnimationStarted)
-                    _jumpTo(context, widget._key[1]);
-                },
-              ),
-              ListTile(
-                title: Text(
-                  'Social',
-                  style: _textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                onTap: () {
-                  if (_bloc.isProfileAnimationStarted)
-                    _jumpTo(context, widget._key[2]);
-                },
-              ),
-            ],
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          ListTile(
+            title: Text(
+              'Who I\'m',
+              style: _textStyle,
+              textAlign: TextAlign.center,
+            ),
+            onTap: () {
+              if (_bloc.isProfileAnimationStarted)
+                _jumpTo(context, widget._key[0]);
+            },
           ),
-        ),
+          ListTile(
+            title: Text(
+              'Work',
+              style: _textStyle,
+              textAlign: TextAlign.center,
+            ),
+            onTap: () {
+              if (_bloc.isProfileAnimationStarted)
+                _jumpTo(context, widget._key[1]);
+            },
+          ),
+          ListTile(
+            title: Text(
+              'Social',
+              style: _textStyle,
+              textAlign: TextAlign.center,
+            ),
+            onTap: () {
+              if (_bloc.isProfileAnimationStarted)
+                _jumpTo(context, widget._key[2]);
+            },
+          ),
+        ],
       ),
     );
   }

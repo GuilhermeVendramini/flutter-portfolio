@@ -46,6 +46,8 @@ flutter:
     - assets/images/instagram.png
     - assets/images/linkedin.png
     - assets/images/whatsapp.png
+    - assets/images/ecommerce.jpg
+    - assets/images/gui.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
