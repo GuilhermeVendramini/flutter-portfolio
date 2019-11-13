@@ -1,4 +1,4 @@
-import 'package:portfolio/src/shared/models/work_model.dart';
+import '../../src/shared/models/work_model.dart';
 
 List<WorkModel> worksData = [
   WorkModel(
