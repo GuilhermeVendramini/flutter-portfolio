@@ -38,4 +38,18 @@ List<WorkModel> worksData = [
     category: 'Flutter',
     link: 'https://github.com/GuilhermeVendramini/flutter-projectx',
   ),
+  WorkModel(
+    title: 'Iguatemi',
+    image: 'iguatemi.jpg',
+    description: 'Iguatemi Mall - More than 10 sites using Drupal 8 multisites',
+    category: 'Drupal',
+    link: 'https://iguatemi.com.br',
+  ),
+  WorkModel(
+    title: 'CNC',
+    image: 'cnc.jpg',
+    description: 'Was migrated from Drupal 6 to Drupal 8.',
+    category: 'Drupal',
+    link: 'http://cnc.org.br',
+  ),
 ];
