@@ -19,22 +19,19 @@ class WorkCard extends StatelessWidget {
     _category() {
       return Align(
         alignment: Alignment.topLeft,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Container(
-            width: 120.0,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.white.withOpacity(0.6),
-              ),
+        child: Container(
+          width: 120.0,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.white.withOpacity(0.6),
             ),
-            padding: EdgeInsets.all(10.0),
-            child: Text(
-              _work.category,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16.0,
-              ),
+          ),
+          padding: EdgeInsets.all(6.0),
+          child: Text(
+            _work.category,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16.0,
             ),
           ),
         ),
@@ -62,13 +59,16 @@ class WorkCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               SizedBox(
-                height: 20.0,
+                height: 16.0,
               ),
               Expanded(
                 child: Text(
                   _work.description,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
+              _category(),
             ],
           ),
         ),
@@ -105,18 +105,6 @@ class WorkCard extends StatelessWidget {
           ),
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.center,
-                colors: [
-                  Colors.black,
-                  Colors.transparent,
-                ],
-              ),
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
               color: Colors.black,
               gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
@@ -128,7 +116,7 @@ class WorkCard extends StatelessWidget {
               ),
             ),
           ),
-          _category(),
+          //_category(),
           _body(),
           _inkWell(),
         ],

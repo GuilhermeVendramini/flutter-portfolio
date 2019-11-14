@@ -117,7 +117,7 @@ class SocialBox extends StatelessWidget {
         color: Colors.transparent,
         width: _targetWidth,
         margin: EdgeInsets.only(top: 80.0),
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 80.0),
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 60.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
@@ -133,6 +133,15 @@ class SocialBox extends StatelessWidget {
               height: 100.0,
             ),
             kIsWeb ? _emailAndPhoneWeb() : _emailMobile(),
+            SizedBox(
+              height: 40.0,
+            ),
+            Text(
+              'Made with Flutter',
+              style: TextStyle(
+                fontWeight: FontWeight.w300,
+              ),
+            ),
           ],
         ),
       ),

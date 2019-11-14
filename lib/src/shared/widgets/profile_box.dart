@@ -25,16 +25,64 @@ class ProfileBox extends StatelessWidget {
       );
     }
 
+    _flags() {
+      return Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset(
+            'assets/images/brazil.png',
+            height: 30.0,
+          ),
+          SizedBox(
+            width: 20.0,
+          ),
+          Image.asset(
+            'assets/images/italy.png',
+            height: 30.0,
+          ),
+        ],
+      );
+    }
+
     _body() {
       return Container(
         width: _targetWidth,
-        child: Text(
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in varius lacus, tincidunt euismod massa. Donec consectetur justo nec ligula imperdiet, eu elementum augue pellentesque. Sed fringilla luctus ipsum eget posuere. Nulla sit amet dui ac elit dignissim malesuada. Morbi cursus, tellus consequat malesuada faucibus, augue metus sollicitudin orci, sed gravida metus enim sed nunc. Donec lacus nulla, commodo finibus ipsum et, auctor molestie nisi. Donec rutrum id diam ac volutpat. Nulla hendrerit magna in massa imperdiet feugiat. Nulla odio lacus, sollicitudin sit amet dui ac, mollis eleifend mi.',
-          style: TextStyle(
-            fontSize: 20.0,
-            letterSpacing: 1.0,
-            wordSpacing: 1.0,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Web developer with focus on Drupal but in love with Flutter\n\n',
+              style: TextStyle(
+                fontSize: 22.0,
+                letterSpacing: 1.0,
+                wordSpacing: 1.0,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              'I\'m currently studying Flutter, with 3 Udemy courses already finished. I have been daily improving my knowledge, creating mobile and web applications  using this amazing technology.',
+              style: TextStyle(
+                fontSize: 18.0,
+                letterSpacing: 1.0,
+                wordSpacing: 1.0,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 40.0,
+            ),
+            Text(
+              'Nationalities',
+              style: TextStyle(
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            _flags(),
+          ],
         ),
       );
     }
@@ -54,7 +102,7 @@ class ProfileBox extends StatelessWidget {
         width: _deviceWidth,
         color: Colors.black.withOpacity(0.4),
         margin: EdgeInsets.only(top: 130.0),
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 80.0),
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 60.0),
         child: Column(
           children: <Widget>[
             _title(),

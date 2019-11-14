@@ -48,6 +48,12 @@ flutter:
     - assets/images/whatsapp.png
     - assets/images/ecommerce.jpg
     - assets/images/gui.jpg
+    - assets/images/smart-home.jpg
+    - assets/images/simple-slider.jpg
+    - assets/images/coupons.jpg
+    - assets/images/lol.jpg
+    - assets/images/brazil.png
+    - assets/images/italy.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
