@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../../app_bloc.dart';
 
@@ -88,9 +89,15 @@ class ProfileBox extends StatelessWidget {
     }
 
     _avatar() {
-      return CircleAvatar(
-        backgroundImage: AssetImage('assets/images/gui.jpg'),
-        radius: 80.0,
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(90.0),
+        child: FadeInImage(
+          height: 180.0,
+          width: 180.0,
+          placeholder: MemoryImage(kTransparentImage),
+          image: AssetImage('assets/images/gui.jpg'),
+          fit: BoxFit.cover,
+        ),
       );
     }
 
