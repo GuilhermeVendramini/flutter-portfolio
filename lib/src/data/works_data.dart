@@ -4,7 +4,7 @@ List<WorkModel> worksData = [
   WorkModel(
     title: 'I\'ll Find You',
     image: 'ill-find-you.png',
-    description: 'A prototype to find missing people using Machine Learning',
+    description: 'A prototype to find missing people using Machine Learning.',
     category: 'Flutter',
     link: 'https://www.linkedin.com/pulse/flutter-machine-learning-guilherme-vendramini',
   ),
@@ -18,7 +18,7 @@ List<WorkModel> worksData = [
   WorkModel(
     title: 'Split Order UI',
     image: 'split-order.jpg',
-    description: 'Split Order UI using Provider and Mobx',
+    description: 'Split Order UI using Provider and Mobx.',
     category: 'Flutter',
     link: 'https://www.youtube.com/watch?v=rbk6k4mUL6U',
   ),

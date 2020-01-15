@@ -65,7 +65,7 @@ class WorkCard extends StatelessWidget {
                 child: Text(
                   _work.description,
                   maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
+                  //overflow: TextOverflow.ellipsis,
                 ),
               ),
               _category(),
