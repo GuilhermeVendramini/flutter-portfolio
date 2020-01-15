@@ -53,7 +53,7 @@ class ProfileBox extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Web developer with focus on Drupal but in love with Flutter\n\n',
+              'Flutter and Web developer\n\n',
               style: TextStyle(
                 fontSize: 22.0,
                 letterSpacing: 1.0,

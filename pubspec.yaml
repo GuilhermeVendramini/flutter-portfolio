@@ -57,6 +57,8 @@ flutter:
     - assets/images/lol.jpg
     - assets/images/brazil.png
     - assets/images/italy.png
+    - assets/images/split-order.jpg
+    - assets/images/ill-find-you.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

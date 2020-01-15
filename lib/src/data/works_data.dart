@@ -2,11 +2,25 @@ import '../../src/shared/models/work_model.dart';
 
 List<WorkModel> worksData = [
   WorkModel(
+    title: 'I\'ll Find You',
+    image: 'ill-find-you.png',
+    description: 'A prototype to find missing people using Machine Learning',
+    category: 'Flutter',
+    link: 'https://www.linkedin.com/pulse/flutter-machine-learning-guilherme-vendramini',
+  ),
+  WorkModel(
     title: 'Flutter Ecommerce',
     image: 'ecommerce.jpg',
     description: 'Flutter Ecommerce UI - More than 10 ecommerce screens.',
     category: 'Flutter',
     link: 'https://github.com/GuilhermeVendramini/flutter-ecommerce',
+  ),
+  WorkModel(
+    title: 'Split Order UI',
+    image: 'split-order.jpg',
+    description: 'Split Order UI using Provider and Mobx',
+    category: 'Flutter',
+    link: 'https://www.youtube.com/watch?v=rbk6k4mUL6U',
   ),
   WorkModel(
     title: 'LoL Profile',

@@ -94,12 +94,15 @@ class WorkCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 8.0),
       child: Stack(
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/${_work.image}'),
-                alignment: Alignment.topCenter,
-                fit: BoxFit.cover,
+          Opacity(
+            opacity: 0.9,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/${_work.image}'),
+                  alignment: Alignment.topCenter,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
@@ -115,9 +118,9 @@ class WorkCard extends StatelessWidget {
                 ],
               ),
             ),
+            child: _body(),
           ),
           //_category(),
-          _body(),
           _inkWell(),
         ],
       ),

@@ -21,7 +21,13 @@ class AppPage extends StatelessWidget {
       title: 'Portfolio - Guilherme Vendramini',
       home: Stack(
         children: <Widget>[
-          BackgroundImage(),
+          Container(
+            decoration: GradientBox.boxDecoration(),
+            child: Opacity(
+              opacity: 0.2,
+              child: BackgroundImage(),
+            ),
+          ),
           PageContent(),
         ],
       ),
@@ -52,31 +58,28 @@ class _PageContentState extends State<PageContent> {
     final _isIntroAnimationStarted = _bloc.isIntroAnimationStarted;
     final _showProfileBox = _bloc.showProfileBox;
 
-    return Container(
-      decoration: GradientBox.boxDecoration(),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        drawer: DefaultDrawer(_controller, [_profileKey, _workKey, _socialKey]),
-        appBar: DefaultAppBar.appBar(),
-        body: SafeArea(
-          child: AnimatedContainer(
-            alignment: _isIntroAnimationStarted
-                ? Alignment.topCenter
-                : Alignment.bottomCenter,
-            duration: Duration(seconds: 2),
-            curve: Curves.fastOutSlowIn,
-            child: SingleChildScrollView(
-              controller: _controller,
-              child: Container(
-                padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
-                child: Column(
-                  children: <Widget>[
-                    IntroductionBox(),
-                    _showProfileBox ? ProfileBox(_profileKey) : Container(),
-                    _showProfileBox ? WorkBox(_workKey) : Container(),
-                    _showProfileBox ? SocialBox(_socialKey) : Container(),
-                  ],
-                ),
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      drawer: DefaultDrawer(_controller, [_profileKey, _workKey, _socialKey]),
+      appBar: DefaultAppBar.appBar(),
+      body: SafeArea(
+        child: AnimatedContainer(
+          alignment: _isIntroAnimationStarted
+              ? Alignment.topCenter
+              : Alignment.bottomCenter,
+          duration: Duration(seconds: 2),
+          curve: Curves.fastOutSlowIn,
+          child: SingleChildScrollView(
+            controller: _controller,
+            child: Container(
+              padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
+              child: Column(
+                children: <Widget>[
+                  IntroductionBox(),
+                  _showProfileBox ? ProfileBox(_profileKey) : Container(),
+                  _showProfileBox ? WorkBox(_workKey) : Container(),
+                  _showProfileBox ? SocialBox(_socialKey) : Container(),
+                ],
               ),
             ),
           ),
